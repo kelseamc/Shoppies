@@ -15,7 +15,7 @@ function MovieCard({movie, addNom, theme, noms, removeNom}) {
         
     const handleRemove = () => {removeNom(movie)}
         
-    
+    console.log(noms)
 
     return (
         <>

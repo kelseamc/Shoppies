@@ -24,7 +24,7 @@
     display: block;
     height: auto;
     transition: 1s ease;
-    transition-delay: 4s;
+    /* transition-delay: 4s; */
     backface-visibility: hidden;
   }
   
@@ -56,5 +56,3 @@
     cursor: pointer;
   
   }
-
- 
