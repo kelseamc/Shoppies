@@ -7,12 +7,21 @@ function SearchContainer({addNom, noms, removeNom}) {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
+        let isMounted = true;
+
         fetch(`http://www.omdbapi.com/?s=${search}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`)
         .then((r) => r.json())
         .then((data) => {
-           setMovies(data.Search)
+            if (isMounted) handleMovies(data.Search) 
         })
+
+        return () => { isMounted = false };
+        
     }, [search])
+
+    const handleMovies = (data) => {
+        setMovies(data)
+    }
 
     return (
         <div className="results">

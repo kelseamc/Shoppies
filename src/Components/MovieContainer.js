@@ -2,6 +2,7 @@ import React from 'react'
 import MovieCard from './MovieCard'
 
 function MovieContainer({movies, addNom, noms, removeNom}) {
+    
     return (
         <div className="movieContainer">
             {movies.map((mov) => <MovieCard key={mov.imdbID} 

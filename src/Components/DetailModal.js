@@ -5,11 +5,13 @@ function DetailModal({show, movie, closeModal, noms, handleNom, handleRemove}) {
     const [details, setDetails] = useState()
 
     useEffect(() => {
+        let isMounted = true;
         fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&type=movie&apikey=76ce311`)
         .then((r) => r.json())
         .then(data => {
-            setDetails(data)
+            if (isMounted) setDetails(data)
         })
+        return () => { isMounted = false };
     }, [show, movie.imdbID])
 
     return (
