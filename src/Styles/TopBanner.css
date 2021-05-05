@@ -1,0 +1,41 @@
+.banner{
+    height: 5vh;
+    background-color: rgba(53, 53, 53, 0.425);
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+  }
+  
+  .banner h5 {
+    color: rgba(255, 255, 255, 0.685);
+    float: right;
+    margin-right: 20px;
+    margin-left: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .banner h3 {
+    font-family: 'Limelight', cursive;
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 180px;
+    margin-right: 0;
+  }
+  
+  .about {
+    color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    animation: mainFadeIn 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  }
+
+  @keyframes mainFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

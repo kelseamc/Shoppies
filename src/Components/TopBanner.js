@@ -1,10 +1,10 @@
 import React from 'react'
+import '../Styles/TopBanner.css'
 
 function TopBanner() {
     return (
         <div className="banner">
             <h3>THE 🏆 SHOPPIES </h3>
-            {/* <h5>About</h5> */}
         </div>
     )
 }

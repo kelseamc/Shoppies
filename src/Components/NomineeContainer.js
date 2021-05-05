@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import MovieCard from './MovieCard'
-
+import '../Styles/NomContainer.css'
 import Confetti from 'react-confetti'
 
 function NomineeContainer({noms, removeNom}) {

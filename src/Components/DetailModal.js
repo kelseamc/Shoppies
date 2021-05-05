@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import '../Styles/Modal.css'
 
 function DetailModal({show, movie, closeModal, noms, handleNom, handleRemove}) {
     const [details, setDetails] = useState()
@@ -22,11 +23,10 @@ function DetailModal({show, movie, closeModal, noms, handleNom, handleRemove}) {
                     <button onClick={closeModal} >Close</button>
 
                     <div className="topDetails">
-                        <h2> {details.Title} </h2>
-                        <h5> Rated:  {details.Rated} </h5>
-                        <h5> {details.Year} </h5>
-                        <h5> {details.Runtime} </h5>
-
+                        <h2>{details.Title} </h2>
+                        <h5>Rated:  {details.Rated} </h5>
+                        <h5>{details.Year} </h5>
+                        <h5>{details.Runtime} </h5>
                         {noms.find(element => element === movie) ?
                         <button id="nom" onClick={handleRemove}>Remove</button>
                         :

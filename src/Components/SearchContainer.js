@@ -1,12 +1,13 @@
 import React, { useState, useEffect} from 'react'
 import MovieContainer from './MovieContainer'
+import '../Styles/Search.css'
 
 function SearchContainer({addNom, noms, removeNom}) {
     const [search, setSearch] = useState("")
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        fetch(`http://www.omdbapi.com/?s=${search}&type=movie&apikey=76ce311`)
+        fetch(`http://www.omdbapi.com/?s=${search}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`)
         .then((r) => r.json())
         .then((data) => {
            setMovies(data.Search)

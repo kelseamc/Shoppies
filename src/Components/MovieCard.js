@@ -1,22 +1,21 @@
 import React, {useState} from 'react'
 import DetailModal from './DetailModal'
-
+import '../Styles/MovieCard.css'
+import '../Styles/NomCard.css'
 
 function MovieCard({movie, addNom, theme, noms, removeNom}) {
     const [show, setShow] = useState(false)
 
-    function handleDetails(){
-        setShow(true)
-    }
-    function closeModal(){
-        setShow(false)
-    }
-    function handleNom(){
-        addNom(movie)
-    }
-    function handleRemove(){
-        removeNom(movie)
-    }
+
+    const handleDetails = () => {setShow(true)}
+
+    const closeModal = () => {setShow(false)}
+        
+    const handleNom = () => {addNom(movie) }
+        
+    const handleRemove = () => {removeNom(movie)}
+        
+    
 
     return (
         <>

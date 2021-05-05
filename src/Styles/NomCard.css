@@ -1,0 +1,60 @@
+
+  
+  .nomCard{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 150px;
+    background-color: rgba(168, 168, 168, 0.418);
+    text-align: center;
+  }
+  
+  .nomMov{
+    width: 150px;
+    height: 200px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+  }
+  
+  .nomMov img {
+    width: 150px;
+    height: 100%;
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: 1s ease;
+    transition-delay: 4s;
+    backface-visibility: hidden;
+  }
+  
+  .nomMov:hover img {
+    opacity: 0.3;
+  }
+  
+  .nomMov:hover .over-movie-card {
+    opacity: 1;
+  }
+  
+  .nomSubmit{
+    display: block;
+    background-color: rgba(94, 5, 5, 0.781);
+    text-align: center;
+  }
+  
+  .nomSubmit button { 
+    color: rgba(94, 5, 5, 0.781);
+    background-color: white;
+    outline: none;
+    border-radius: 20px;
+    width: 100px;
+    margin: 15px;
+    padding: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  
+  }
+
+ 

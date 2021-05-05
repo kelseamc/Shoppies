@@ -1,9 +1,10 @@
-import './App.css';
-import TopBanner from './TopBanner'
-import Nominees from './NomineeContainer'
-import SearchContainer from './SearchContainer';
+import './Styles/App.css';
 import { useEffect, useState } from 'react';
-import About from "./About"
+import TopBanner from './Components/TopBanner'
+import Nominees from './Components/NomineeContainer'
+import SearchContainer from './Components/SearchContainer';
+
+import About from "./Components/About"
 
 function App() {
   const [nominees, setNominees] = useState([])
