@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-function DetailModal({show, movie, closeModal}) {
+function DetailModal({show, movie, closeModal, noms, handleNom, handleRemove}) {
     const [details, setDetails] = useState()
 
     useEffect(() => {
@@ -9,9 +9,8 @@ function DetailModal({show, movie, closeModal}) {
         .then(data => {
             setDetails(data)
         })
-    }, [show])
+    }, [show, movie.imdbID])
 
-    console.log(details)
     return (
         <>
         {show ?
@@ -23,11 +22,16 @@ function DetailModal({show, movie, closeModal}) {
                     <button onClick={closeModal} >Close</button>
 
                     <div className="topDetails">
-                        <h2>{details.Title}</h2>
-                        <h5>Rated:  {details.Rated}</h5>
-                        <h5>{details.Year}</h5>
-                        <h5>{details.Runtime}</h5>
-                        <button id="nom">Nominate</button>
+                        <h2> {details.Title} </h2>
+                        <h5> Rated:  {details.Rated} </h5>
+                        <h5> {details.Year} </h5>
+                        <h5> {details.Runtime} </h5>
+
+                        {noms.find(element => element === movie) ?
+                        <button id="nom" onClick={handleRemove}>Remove</button>
+                        :
+                        <button id="nom" onClick={handleNom}>Nominate</button>
+                        }
                     </div>
 
                     <div className="movie-details-text">

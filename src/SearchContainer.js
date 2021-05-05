@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import MovieContainer from './MovieContainer'
 
-function SearchContainer() {
+function SearchContainer({addNom, noms, removeNom}) {
     const [search, setSearch] = useState("")
     const [movies, setMovies] = useState([])
 
@@ -23,7 +23,12 @@ function SearchContainer() {
                         onChange={(e) => setSearch(e.target.value)}
                 />
             </div>
-            {movies ? <MovieContainer movies={movies}/> : null}
+            {movies ? <MovieContainer addNom={addNom} 
+                                      movies={movies} 
+                                      noms={noms} 
+                                      removeNom={removeNom}
+                      /> 
+            : null}
 
         </div>
     )
