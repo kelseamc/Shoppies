@@ -6,7 +6,6 @@ import '../Styles/NomCard.css'
 function MovieCard({movie, addNom, theme, noms, removeNom}) {
     const [show, setShow] = useState(false)
 
-
     const handleDetails = () => {setShow(true)}
 
     const closeModal = () => {setShow(false)}
@@ -14,8 +13,8 @@ function MovieCard({movie, addNom, theme, noms, removeNom}) {
     const handleNom = () => {addNom(movie) }
         
     const handleRemove = () => {removeNom(movie)}
-        
-    console.log(noms)
+
+    const nominated = noms.find((obj) => obj.imdbID === movie.imdbID)
 
     return (
         <>
@@ -23,7 +22,7 @@ function MovieCard({movie, addNom, theme, noms, removeNom}) {
                 <img src={movie.Poster} alt={`${movie.Title}`} />
                 {localStorage.getItem("submited") === "true" ? null :
                    ( <div className="over-movie-card">
-                        {noms.find(element => element === movie) ?
+                        {nominated ?
                             <button onClick={handleRemove}>Remove</button>
                             :
                             <button onClick={handleNom}>Nominate</button>
