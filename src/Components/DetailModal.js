@@ -6,7 +6,7 @@ function DetailModal({show, movie, closeModal, noms, handleNom, handleRemove}) {
 
     useEffect(() => {
         let isMounted = true;
-        fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&type=movie&apikey=76ce311`)
+        fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&type=movie&apikey=76ce311`)
         .then((r) => r.json())
         .then(data => {
             if (isMounted) setDetails(data)
