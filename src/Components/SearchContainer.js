@@ -9,7 +9,7 @@ function SearchContainer({addNom, noms, removeNom}) {
     useEffect(() => {
         let isMounted = true;
 
-        fetch(`https://www.omdbapi.com/?s=${search}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`)
+        fetch(`https://www.omdbapi.com/?s=${search}&type=movie&apikey=${REACT_APP_OMDB_API_KEY}`)
         .then((r) => r.json())
         .then((data) => {
             if (isMounted) handleMovies(data.Search) 
