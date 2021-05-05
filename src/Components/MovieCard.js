@@ -29,7 +29,7 @@ function MovieCard({movie, addNom, theme, noms, removeNom}) {
                             <button onClick={handleNom}>Nominate</button>
                         }
                         <br />
-                        {theme === "nomCard" ? null : <button id="details" onClick={handleDetails}>Details</button>}
+                        {theme === "nomMov" ? null : <button id="details" onClick={handleDetails}>Details</button>}
                     </div>)
                 }
             </div>
