@@ -15,14 +15,15 @@
   
   .content {
     background-color: rgb(247, 247, 247);
-    margin: 15% auto;
-    border-radius: 0.25rem;
+    margin: 5% auto;
+    border-radius: 0.40rem;
     width: 55vw;
     height: max-content;
     padding: 2rem;
     position: relative;
     color: black;
     align-items: center;
+
   }
   
   .content img {
